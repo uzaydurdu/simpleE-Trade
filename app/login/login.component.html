@@ -1,0 +1,47 @@
+<form #loginForm="ngForm" (ngSubmit)="login(loginForm)" class="form-signin">
+  <div class="text-center mb-4">
+    <h1 class="h3 mb-3 font-weight-normal">Login To SpaceShop</h1>
+    <p>
+      Build form controls with floating labels via the
+      <code>:placeholder-shown</code> pseudo-element.
+      <a href="https://caniuse.com/#feat=css-placeholder-shown"
+        >Works in latest Chrome, Safari, and Firefox.</a
+      >
+    </p>
+  </div>
+
+  <div class="form-label-group">
+    <input
+      type="text"
+      #userName="ngModel"
+      [(ngModel)]="model.userName"
+      id="userName"
+      name="userName"
+      class="form-control"
+      placeholder="User Name"
+      required
+      autofocus
+    />
+    <label for="inputEmail">User Name</label>
+  </div>
+
+  <div class="form-label-group">
+    <input
+      type="password"
+      #password="ngModel"
+      [(ngModel)]="model.password"
+      id="password"
+      name = "password"
+      class="form-control"
+      placeholder="Password"
+      required
+    />
+    <label for="inputPassword">Password</label>
+  </div>
+
+  <button  class="btn btn-lg btn-primary btn-block" type="submit">
+    Login
+  </button>
+  <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2020</p>
+</form>
+
